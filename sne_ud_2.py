@@ -2,20 +2,25 @@
 Metodo Frontini and Sormani, 0zban 
 Computers and Structures
 Performance of cubic convergent methods for implementing nonlinear constitutive models
-Pag.2  M2 – Frontini and Sormani (2003) [22], 0zban (2004) [23]
+Pag.2-3  M2 – Frontini and Sormani (2003) [22], 0zban (2004) [23]
+Ecuación (7)
+Ejemplo : sne_ud_2("x**3 + 6*x**2 - 18",3,0.0001,1)
 '''
 
 import matplotlib.pyplot as plt
 from sympy import Symbol, sympify, diff, Subs
 
+# CONSISTE EN
+#   un método multipunto redescubrierto propuesto por Traub siguiendo el procedimiento adoptado Kiran et al.
 # ENTRADAS
-# f : funcion
-# x0 : valor inicial
-# tol : tolerancia
-# graf = grafica
+#   f : función
+#   x0 : valor inicial
+#   tol : tolerancia
+#   graf = parámetro para mostrar la gráfica
 # SALIDAS
-# xaprox : aproximacion de x
-# iter : cantidad de iteraciones
+#   xaprox : aproximacián de x
+#   iter : cantidad de iteraciones
+#   graf : gráfica resultante
 def sne_ud_2(f, x0, tol, graf):
     x = Symbol("x")  # Declaracion de x como variable independiente
     try:

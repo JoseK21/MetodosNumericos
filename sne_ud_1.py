@@ -2,20 +2,25 @@
 Metodo Weerakoon and Fernando
 Computers and Structures
 Performance of cubic convergent methods for implementing nonlinear constitutive models
-Pag.2  M1 – Weerakoon and Fernando (2000) [21]
+Pag.2  M1 – Weerakoon and Fernando (2000) [21] 
+Ecuación (5)
+Ejemplo : sne_ud_1("x**3 + 6*x**2 - 18",3,0.0001,1)
 '''
 
 import matplotlib.pyplot as plt
 from sympy import Symbol, sympify, diff, Subs
 
+# CONSISTE EN 
+#   un método multipunto con convergencia cúbica. 
 # ENTRADAS
-# f : funcion
-# x0 : valor inicial
-# tol : tolerancia
-# graf = grafica
+#   f : función
+#   x0 : valor inicial
+#   tol : tolerancia
+#   graf = parámetro para mostrar la gráfica
 # SALIDAS
-# xaprox : aproximacion de x
-# iter : cantidad de iteraciones
+#   xaprox : aproximacián de x
+#   iter : cantidad de iteraciones
+#   graf : gráfica resultante
 def sne_ud_1(f, x0, tol, graf):
     x = Symbol("x")  # Declaracion de x como variable independiente
     try:

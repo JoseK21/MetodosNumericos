@@ -3,19 +3,24 @@ Metodo 0zban , Homeier
 Computers and Structures
 Performance of cubic convergent methods for implementing nonlinear constitutive models
 Pag.3  M3 - 0zban (2004) [23], Homeier (2005) [24]
+Ecuación (9)
+Ejemplo : sne_ud_3("x**3 + 6*x**2 - 18",3,0.0001,1)
 '''
 
 import matplotlib.pyplot as plt
 from sympy import Symbol, sympify, diff, Subs
 
+# CONSISTE EN
+#   un método multipunto cúbico empleando la regla de la cuadratura interpolatoria en funciones inversas.
 # ENTRADAS
-# f : funcion
-# x0 : valor inicial
-# tol : tolerancia
-# graf = grafica
+#   f : función
+#   x0 : valor inicial
+#   tol : tolerancia
+#   graf = parámetro para mostrar la gráfica
 # SALIDAS
-# xaprox : aproximacion de x
-# iter : cantidad de iteraciones
+#   xaprox : aproximacián de x
+#   iter : cantidad de iteraciones
+#   graf : gráfica resultante
 def sne_ud_3(f, x0, tol, graf):
     x = Symbol("x")  # Declaracion de x como variable independiente
     try:
